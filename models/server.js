@@ -5,7 +5,7 @@ class Server{
     constructor(){
         this.app = express()
         this.port = process.env.PORT
-        this.denunciaPath = '/denuncia' //Ruta de la API
+        this.agendaPath = '/agenda' //Ruta de la API
         this.routes()
         this.conectarDB()
     }
@@ -18,7 +18,7 @@ class Server{
         )
     }
     routes(){
-        this.app.use(this.denunciaPath, require('../routes/denuncia'))
+        this.app.use(this.agendaPath, require('../routes/agenda'))
     }
 
     async conectarDB(){
