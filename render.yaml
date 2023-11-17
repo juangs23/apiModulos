@@ -1,0 +1,9 @@
+services:
+  - name: app
+    env: node
+    buildCommand: yarn build
+    startCommand: yarn start
+    plan: starter
+    envVars:
+      - key: NODE_VERSION
+        value: 21 # Esta sería la versión que has instalado
